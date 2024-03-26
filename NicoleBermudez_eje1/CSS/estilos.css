@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/*Usamos fuentes externas descargadas en google font*/
+@font-face { 
+    font-family: 'Open_Sans';                /* definimos una fuente */          
+    src: url('../Fuentes/OpenSans_SemiCondensed-Regular.ttf');     /* indica su ubicación */
+}
+@font-face { 
+    font-family: 'Lexend_medium';                /* definimos una fuente */          
+    src: url('../Fuentes/Lexend-Medium.ttf');     /* indica su ubicación */
+}
+@font-face { 
+    font-family: 'Lexend_extrabold';                /* definimos una fuente */          
+    src: url('../Fuentes/Lexend-ExtraBold.ttf');     /* indica su ubicación */
+}
+@font-face { 
+    font-family: 'Lexend_light';                /* definimos una fuente */          
+    src: url('../Fuentes/Lexend-Light.ttf');     /* indica su ubicación */
+}
+
+/* establecemos un estilo para la barra de navegacion, centrando los botones de seleccion 
+    su posicion esta fija de modo que se mantendra en la misma y se encuentra ubicada en el lado derecho de la pagina*/
+nav {
+    flex: 0;
+    background-color: #6E9FC1;
+    padding: 50px 50px 50px 50px;
+    position: fixed;
+    display: fixed;
+    width: 15%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+}
+
+/* quitamos el margen y el padding del ul y el ul li de la barra de navegacion para poder centrar los botones de la barra*/
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* finalmente establecemos el estilo de los botones*/
+nav ul li a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding: 20px;
+    background-color: #E9ECEE;
+    color: black;
+    text-decoration: none;  
+    text-transform: uppercase;
+    font-size: medium;
+    font-family: 'Lexend_medium';
+    text-align: center;
+}
+
+/* el siguiente estilo permite un sombreado sobre el boton de navegacion en el cual se enceuntre el mouse*/
+nav ul li a:hover {
+    background-color: #6E9FC1;
+    color: white;
+}
+
+
+/* establecemos el estilo del pie de pagina*/
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 30pt;
+    font-size:medium;
+    font-family: 'Lexend_light';
+    background-color: #A3CAE9;
+    color: black;
+    text-align: center;
+}
+
+/* estilo de texto para el titulo de la pagina principal*/
+.welcome{
+    position: absolute;
+    font-size:xx-large;
+    width: 40%;
+    padding: 40px;
+    top:5%;
+    left: 40%;
+    font-family: 'Lexend_extrabold'; 
+    background-color: #A3CAE9;
+    color: white;
+    text-align: center;
+}
+
+/* definimos un estilo de texto para resaltar subtitulos de un color distinto */
+.text_uno{
+    font-size:x-large;
+    color:white;
+    font-family: "Lexend_extrabold";
+}
+
+/* definimos un estilo de texto para resaltar subtitulos
+    color negro, largo y estilo medio*/
+.text_dos{
+    font-size:large;
+    color:black;
+    font-family: "Lexend_medium";
+}
+
+/* definimos un estilo de texto para el texto del cuerpo 
+    color negro, medio y estilo light*/
+.text_tres{
+    font-size: medium;
+    color: black;
+    font-family: "Lexend_light";
+}
+
+/* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto */
+.img_uno{
+    float: left;
+    margin-right: 20pt;
+    border-radius: 5pt; /* Redondea los bordes de la imagen */
+}
+/* El siguiente estilo es para cuadrar la imagen al lado derecho del texto */
+.img_dos{
+    float: right;
+    margin-left: 20pt;
+    border-radius: 5pt;
+}
+
+/* Estilo de un panel para el texto introductorio de la pagina principal 
+    posicion fija, fondo blanco, con texto centrado*/
+.panel_intro{
+    position: fixed;
+    background-color: white;
+    top: 54%;
+    left: 43%;
+    width: 40%;
+    height: 20%;  
+    text-align: center; 
+}
+
+ul{
+    font-size: medium;
+    color: black;
+    font-family: "Lexend_light";   
+}
+
+/* Estilo del panel usado en cada pagina web para cuadrar el texto 
+    y el contenido*/
+.panel{
+    overflow-y: scroll;
+    position: fixed;
+    background-color: white;
+    padding: 10pt 40pt 10pt 40pt;
+    top: 2%;
+    left: 30%;
+    width: 60%;
+    height: 80%;
+}
