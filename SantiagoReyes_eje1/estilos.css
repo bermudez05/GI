@@ -21,6 +21,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header{
@@ -43,8 +44,9 @@ nav ul {
 /* Estilo del elemento de lista de la barra de navegación */
 nav ul li {
     list-style-type: none; /* Sin viñetas */
-    text-align: center; /* Alineación del texto */
+    align-items: center; /* Alineación del texto */
     justify-content: center;
+    overflow-y: hidden;
 }
 
 /* Estilo de los enlaces de la barra de navegación */
@@ -77,7 +79,7 @@ nav ul li a:hover {
 .contenedorrow {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 79vw;
     height: 100vh;
 }
 .contenedorleft{
@@ -91,7 +93,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 .contenedordown_index{
-    height: fit-content;
+    height: 100%;
     width: 100%;
     justify-content: center;
     background-color: #fff4e3;
