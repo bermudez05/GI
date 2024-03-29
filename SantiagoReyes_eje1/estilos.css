@@ -18,85 +18,115 @@
     src: url('Fuentes/Montserrat-Thin.ttf');     /* indica su ubicación */
 }
 
-.titulo {
-    background-color: white; /* Color de fondo */
-    position: fixed; /* Posición fija en la ventana del navegador */
-    flex-direction: column; /* Dirección de diseño de flexbox */
-    height: 70px; /* Altura del título */
-    top: 0; /* Espaciado superior */
-    left: 0; /* Espaciado izquierdo */
-    right: 0; /* Espaciado derecho */
-    text-align: center; /* Alineación del texto */
-    font-family: "Montserrat_black"; /* Fuente del título */
-    color: #B9A485; /* Color del texto */
-    font-size: 320%; /* Tamaño de fuente */
-    padding-top: 50px; /* Espacio superior adicional */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-nav {
-    flex: 0; /* Establece el factor de flexibilidad */
-    background-color: #B9A485; /* Color de fondo */
+.header{
+    width: 100vw;
+    background-color: #785d56;
+    display: flex;
+}
+
+.navbar {
     padding: 50px 50px 50px 50px; /* Relleno (arriba, derecha, abajo, izquierda) */
-    display: flex; /* Display como flexbox */
-    position: fixed; /* Posición fija */
-    top: 120px; /* Espaciado superior */
-    left: 0; /* Espaciado izquierdo */
-    right: 0; /* Espaciado derecho */
-    flex-direction: row; /* Dirección de diseño de flexbox */
     justify-content: center; /* Alineación horizontal */
 }
 
 /* quitamos el margen y el padding del ul y el ul li de la barra de navegacion para poder centrar los botones de la barra*/
 /* Estilo de la lista no ordenada */
 nav ul {
-    margin: 0; /* Margen cero */
-    padding: 0; /* Relleno cero */
     display: flex; /* Display como flexbox */
 }
 
 /* Estilo del elemento de lista de la barra de navegación */
 nav ul li {
     list-style-type: none; /* Sin viñetas */
-    margin: 0; /* Margen cero */
-    padding: 5px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    justify-content: center;
 }
 
 /* Estilo de los enlaces de la barra de navegación */
 nav ul li a {
-    margin: 0; /* Margen cero */
-    padding: 0; /* Relleno cero */
-    padding: 20px; /* Relleno (arriba y abajo) */
-    background-color: #E9ECEE; /* Color de fondo */
-    color: black; /* Color del texto */
+    padding: 7px;
+    color: #e6d5c1; /* Color del texto */
     text-decoration: none; /* Sin decoración de texto */
     text-transform: uppercase; /* Transforma el texto a mayúsculas */
     font-size: medium; /* Tamaño de fuente */
     font-family: 'Montserrat_bold'; /* Fuente */
-    text-align: center; /* Alineación del texto */
-    border-radius: 5px; /* Radio de borde */
 }
 
 /* Estilo del enlace de la barra de navegación al pasar el mouse */
 nav ul li a:hover {
-    background-color: #B9A485; /* Cambia el color de fondo al pasar el mouse */
     color: white; /* Cambia el color del texto al pasar el mouse */
 }
 
 
-/* Estilo del pie de página */
-footer {
-    position: fixed; /* Posición fija */
-    width: 100%; /* Ancho del 100% */
-    left: 0; /* Espaciado izquierdo */
-    bottom: 0; /* Espaciado inferior */
-    padding: 10px; /* Relleno */
-    font-size: medium; /* Tamaño de fuente */
-    font-family: 'Montserrat_thin'; /* Fuente */
-    background-color: white; /* Color de fondo */
-    color: black; /* Color del texto */
-    text-align: center; /* Alineación del texto */
+/* El siguiente estilo es para cuadrar la imagen centrada en un contenedor */
+.contenedorcol {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%; /* Ubica el div en el centro horizontal */
+    top: 70%;
+    width: 80vw;
+    height: 100vh;
+    transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+}
+.contenedorrow {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 100vh;
+}
+.contenedorleft{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+.contenedorright{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+.contenedordown_index{
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    background-color: #fff4e3;
 }
 
+.titulohead{
+    font-family: "Montserrat_black";
+    color: #e6d5c1;
+    font-size: 1.7rem;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.text_index{
+    font-family: "Montserrat_black";
+    position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #785d56;
+    font-size: 4rem;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.text_intro{
+    font-family: "Montserrat_light";
+    position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #be4c54;
+    font-size: 1rem;
+    padding: 2%;
+}
 
 /* Estilo para resaltar subtítulos con color diferente */
 .text_uno {
@@ -108,7 +138,7 @@ footer {
 /* Estilo para subtítulos en texto negro, tamaño mediano y estilo light */
 .text_dos {
     font-size: medium; /* Tamaño de fuente */
-    color: black; /* Color del texto */
+    color: #785d56; /* Color del texto */
     font-family: "Montserrat_light"; /* Fuente */
     text-align: left; /* Alineación del texto */
 }
@@ -128,16 +158,6 @@ footer {
     border-radius: 5pt; /* Redondea los bordes de la imagen */
 }
 
-/* El siguiente estilo es para cuadrar la imagen centrada en un contenedor */
-.contenedor {
-	flex: 0;
-    display: flex;
-	flex-direction: column;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    height: 300px; /* Ajusta la altura según sea necesario */
-}
 .contenedor2 {
 	flex: 0;
     display: flex;
