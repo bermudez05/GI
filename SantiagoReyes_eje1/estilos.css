@@ -18,6 +18,11 @@
     src: url('Fuentes/Montserrat-Thin.ttf');     /* indica su ubicación */
 }
 
+@font-face { 
+    font-family: 'Montserrat_regular';                /* definimos una fuente */          
+    src: url('Fuentes/Montserrat-Regular.ttf');     /* indica su ubicación */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,9 +30,11 @@
 }
 
 .header{
+    position: fixed;
     width: 100vw;
     background-color: #785d56;
     display: flex;
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
 }
 
 .navbar {
@@ -43,10 +50,10 @@ nav ul {
 
 /* Estilo del elemento de lista de la barra de navegación */
 nav ul li {
+    display: flex;
     list-style-type: none; /* Sin viñetas */
     align-items: center; /* Alineación del texto */
     justify-content: center;
-    overflow-y: hidden;
 }
 
 /* Estilo de los enlaces de la barra de navegación */
@@ -76,11 +83,22 @@ nav ul li a:hover {
     height: 100vh;
     transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
 }
+
 .contenedorrow {
     display: flex;
     flex-direction: row;
-    width: 79vw;
+    width: 100%;
     height: 100vh;
+}
+.contenedorrow_uno {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.contenedorcolum {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .contenedorleft{
     width: 50%;
@@ -97,6 +115,19 @@ nav ul li a:hover {
     width: 100%;
     justify-content: center;
     background-color: #fff4e3;
+}
+
+/* Estilo del panel usado en cada página web para cuadrar el texto y el contenido */
+.panel {
+    position: absolute;
+    flex-direction: column;
+    overflow: visible;
+    left: 50%; /* Ubica el div en el centro horizontal */
+    top: 50%;
+    width: 80vw;
+    margin-top: 150px;
+    height: 100vh;
+    transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
 }
 
 .titulohead{
@@ -130,26 +161,20 @@ nav ul li a:hover {
     padding: 2%;
 }
 
-/* Estilo para resaltar subtítulos con color diferente */
-.text_uno {
-    font-size: x-large; /* Tamaño de fuente */
-    color: #C19659; /* Color del texto */
-    font-family: "Montserrat_bold"; /* Fuente */
-}
-
-/* Estilo para subtítulos en texto negro, tamaño mediano y estilo light */
-.text_dos {
-    font-size: medium; /* Tamaño de fuente */
+.text_titulo {
+    font-size:x-large; /* Tamaño de fuente */
     color: #785d56; /* Color del texto */
-    font-family: "Montserrat_light"; /* Fuente */
+    font-family: "Montserrat_black"; /* Fuente */
     text-align: left; /* Alineación del texto */
+    padding: 1%;
 }
 
 /* Estilo para el texto del cuerpo en negro, tamaño mediano y estilo light */
-.text_tres {
+.text_uno {
+    padding: 2%;
     font-size: medium; /* Tamaño de fuente */
-    color: black; /* Color del texto */
-    font-family: "Montserrat_thin"; /* Fuente */
+    color: #785d56; /* Color del texto */
+    font-family: "Montserrat_regular"; /* Fuente */
 }
 
 /* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto */
@@ -188,16 +213,6 @@ ul {
     font-family: "Montserrat_bold"; /* Fuente */
 }
 
-/* Estilo del panel usado en cada página web para cuadrar el texto y el contenido */
-.panel {
-    overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
-    position: fixed; /* Posición fija */
-    background-color: white; /* Color de fondo blanco */
-    padding: 10pt 40pt 10pt 40pt; /* Relleno (arriba, derecha, abajo, izquierda) */
-    top: 40%; /* Posiciona el panel en el 40% superior de la pantalla */
-    width: 90%; /* Ancho del 90% */
-    max-height: 50%; /* Altura máxima del 50% */
-}
 
 table {
     width: 100%; /* Ancho del 100% */
