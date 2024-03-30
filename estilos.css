@@ -341,6 +341,9 @@ figcaption {
     /* El siguiente estilo es para cuadrar la imagen centrada en un contenedor */
     .contenedorcol {
         display: inline-block;
+        position: absolute;
+        overflow: visible;
+        box-sizing: border-box;
         flex-direction: column;
         left: 50%; /* Ubica el div en el centro horizontal */
         top: 50%;
@@ -352,6 +355,8 @@ figcaption {
     
     .contenedorrow {
         flex-direction: column;
+        overflow: visible;
+        box-sizing: border-box;
         width: 100%;
         display: inline-block;
     }
@@ -366,7 +371,9 @@ figcaption {
         width: 100%;
     }
     .contenedorleft{
-        width: 100%;    
+        width: 100%;  
+        min-height: fit-content; 
+        max-height: 20%;
     }
     .contenedorright{
         width: 100%;    
@@ -374,7 +381,6 @@ figcaption {
     .contenedordown_index{
         height: 100%;
         width: 100%;
-        justify-content: center;
         background-color: #fff4e3;
     }
     
@@ -411,7 +417,7 @@ figcaption {
         color: #e6d5c1;
         font-size: 1rem;
         text-align: center;
-        padding-top: 2%;
+        padding-top: 1%;
     }
     
     .text_index{
@@ -434,7 +440,7 @@ figcaption {
         left: 50%;
         transform: translate(-50%, -50%);
         color: #785d56;
-        font-size: 2rem;
+        font-size: 3rem;
         padding: 2%;
         text-align: center;
         transition: color 2s;
@@ -446,7 +452,7 @@ figcaption {
         left: 50%;
         transform: translate(-50%, -50%);
         color: #be4c54;
-        font-size: 2rem;
+        font-size: 3rem;
         cursor:pointer
     }
     
