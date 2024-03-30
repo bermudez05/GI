@@ -457,11 +457,6 @@ figcaption {
   /* Consulta de medios para tabletas o portátiles sencillos (800px - 1200px) */
   @media only screen and (min-width: 801px) and (max-width: 1200px) {
     /* Estilos específicos para pantallas de 800px a 1200px de ancho */
-  }
-  
-  /* Consulta de medios para pantallas de escritorio (>1200px) */
-  @media only screen and (min-width: 1201px) {
-    /* Estilos específicos para pantallas de más de 1200px de ancho */
     * {
         margin: 0;
         padding: 0;
@@ -618,4 +613,10 @@ figcaption {
         width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
         height: auto; /* Establece la altura máxima de la imagen al 100% del contenedor */
     }
+  }
+  
+  /* Consulta de medios para pantallas de escritorio (>1200px) */
+  @media only screen and (min-width: 1201px) {
+    /* Estilos específicos para pantallas de más de 1200px de ancho */
+    /* El diseño inicial se planeo para este tipo de pantallas por lo tanto no resulta necesario especificar algun cambio en el diseño*/
   }
