@@ -142,6 +142,7 @@ nav ul li a:hover {
     margin-top: 150px;
     height: 100vh;
     transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+    line-height: 1.5;
 }
 
 .titulohead{
@@ -203,20 +204,20 @@ nav ul li a:hover {
     float: left;
     margin-right: 20pt;
 	margin-top: 20pt;
-    border-radius: 5pt; /* Redondea los bordes de la imagen */
 }
 
 .img_dos {
     padding: 2%;
     align-items: center;
-    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
-    max-height: 100%; /* Establece la altura máxima de la imagen al 100% del contenedor */
+    width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+    height: 100%; /* Establece la altura máxima de la imagen al 100% del contenedor */
 }
 
 /* El siguiente estilo es para cuadrar la imagen al lado derecho del texto */
 .img_tres {
     float: right; /* Flota la imagen a la derecha del texto */
     margin-left: 20pt; /* Margen izquierdo para separar la imagen del texto */
+    margin-top: 20pt;
 }
 
 .list_uno {
