@@ -305,7 +305,7 @@ figcaption {
         position: fixed;
         width: 100vw;
         background-color: #785d56;
-        height: 34%;
+        height: 40%;
         z-index: 1000; /* Asegura que el header esté por encima del contenido */
     }
     .navbar {
@@ -451,6 +451,14 @@ figcaption {
         max-width: 90%;
         width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
         height: auto; /* Establece la altura máxima de la imagen al 100% del contenedor */
+    }
+    .img_tres {
+        float: right; /* Flota la imagen a la derecha del texto */
+        margin-left: 20pt; /* Margen izquierdo para separar la imagen del texto */
+        margin-top: 20pt;
+        max-height: 90%;
+        max-width: 90%;
+        padding: 2%;
     }
   }
   
