@@ -301,7 +301,6 @@ figcaption {
         padding: 0;
         overflow-x: hidden;
     }
-
     .header{
         position: fixed;
         width: 100vw;
@@ -309,35 +308,26 @@ figcaption {
         height: 34%;
         z-index: 1000; /* Asegura que el header esté por encima del contenido */
     }
-
     .navbar {
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-    
+    } 
     /* quitamos el margen y el padding del ul y el ul li de la barra de navegacion para poder centrar los botones de la barra*/
     /* Estilo de la lista no ordenada */
     nav ul {
         display: flex; /* Display como flexbox */
         flex-direction: column;
     }
-    
     /* Estilo de los enlaces de la barra de navegación */
     nav ul li a {
         padding: 3px;
         color: #e6d5c1; /* Color del texto */
         text-decoration: none; /* Sin decoración de texto */
         text-transform: uppercase; /* Transforma el texto a mayúsculas */
-        font-size: small; /* Tamaño de fuente */
+        font-size: smaller; /* Tamaño de fuente */
         font-family: 'Montserrat_bold'; /* Fuente */
     }
-    
-    /* Estilo del enlace de la barra de navegación al pasar el mouse */
-    nav ul li a:hover {
-        color: white; /* Cambia el color del texto al pasar el mouse */
-    }
-    
     /* El siguiente estilo es para cuadrar la imagen centrada en un contenedor */
     .contenedorcol {
         display: inline-block;
@@ -352,7 +342,6 @@ figcaption {
         margin-top: 45%;
         transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
     }
-    
     .contenedorrow {
         flex-direction: column;
         overflow: visible;
@@ -360,30 +349,17 @@ figcaption {
         width: 100%;
         display: inline-block;
     }
-    .contenedorrow_uno {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .contenedorcolum {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
     .contenedorleft{
         width: 100%;  
         min-height: fit-content; 
         max-height: 20%;
+        justify-content: center;
     }
     .contenedorright{
-        width: 100%;    
+        width: 100%; 
+        height: inherit; 
+        justify-content: center;  
     }
-    .contenedordown_index{
-        height: 100%;
-        width: 100%;
-        background-color: #fff4e3;
-    }
-    
     /* Estilo del panel usado en cada página web para cuadrar el texto y el contenido */
     .panel {
         position: absolute;
@@ -392,11 +368,10 @@ figcaption {
         left: 50%; /* Ubica el div en el centro horizontal */
         top: 50%;
         width: 80vw;
-        margin-top: 12%;
+        margin-top: 40%;
         height: 100vh;
         transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
     }
-    
     .panel_dos {
         background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('imagenes/textos.png');
         background-position: center; /* Centra la imagen de fondo */
@@ -406,12 +381,11 @@ figcaption {
         left: 50%; /* Ubica el div en el centro horizontal */
         top: 50%;
         width: 80vw;
-        margin-top: 12%;
+        margin-top: 40%;
         height: 100vh;
         transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
         line-height: 1.5;
     }
-    
     .titulohead{
         font-family: "Montserrat_black";
         color: #e6d5c1;
@@ -419,7 +393,6 @@ figcaption {
         text-align: center;
         padding-top: 1%;
     }
-    
     .text_index{
         font-family: "Montserrat_black";
         position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
@@ -431,7 +404,6 @@ figcaption {
         padding-top: 2%;
         padding-left: 2%;
     }
-    
     /*Texto del inicio al cual le aplicamos una transicion que cambia su color durante 2 segundos*/
     .text_index_trans{
         font-family: "Montserrat_black";
@@ -455,8 +427,6 @@ figcaption {
         font-size: 3rem;
         cursor:pointer
     }
-    
-    
     .text_intro{
         font-family: "Montserrat_light";
         position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
@@ -467,7 +437,6 @@ figcaption {
         font-size: 1rem;
         padding: 2%;
     }
-    
     .text_titulo {
         font-size:x-large; /* Tamaño de fuente */
         color: #785d56; /* Color del texto */
@@ -475,85 +444,13 @@ figcaption {
         text-align: left; /* Alineación del texto */
         padding: 1%;
     }
-    
-    /* Estilo para el texto del cuerpo en negro, tamaño mediano y estilo light */
-    .text_uno {
-        padding: 2%;
-        font-size: medium; /* Tamaño de fuente */
-        color: #785d56; /* Color del texto */
-        font-family: "Montserrat_regular"; /* Fuente */
-    }
-    
-    .text_dos {
-        padding: 2%;
-        font-size: medium; /* Tamaño de fuente */
-        color: #be4c54; /* Color del texto */
-        font-family: "Montserrat_bold"; /* Fuente */
-    }
-    
-    /* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto */
-    .img_uno{
-        float: left;
-        margin-right: 20pt;
-        margin-top: 20pt;
-    }
-    
     .img_dos {
         padding: 2%;
         align-items: center;
-        width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
-        height: 100%; /* Establece la altura máxima de la imagen al 100% del contenedor */
-    }
-    
-    /* El siguiente estilo es para cuadrar la imagen al lado derecho del texto */
-    .img_tres {
-        float: right; /* Flota la imagen a la derecha del texto */
-        margin-left: 20pt; /* Margen izquierdo para separar la imagen del texto */
-        margin-top: 20pt;
-    }
-    
-    .list_uno {
-        font-size: medium; /* Tamaño de fuente medio */
-        color: #be4c54; /* Color del texto */
-        font-family: "Montserrat_bold"; /* Fuente */
-    }
-    
-    .video{
-        display: flex;
-        overflow: hidden;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        background-color: #e6d5c1;
-    }
-    
-    table {
-        width: 100%; /* Ancho del 100% */
-        border-collapse: collapse; /* Colapso de borde de tabla */
-    }
-    
-    th, td {
-        border: 1px solid #e6d5c1; /* Borde de 1 píxel sólido */
-        padding: 8px; /* Relleno */
-        text-align: center; /* Alineación del texto centrada */
-        height: 20px; /* Altura del 20px */
-        font-family: "Montserrat_regular"; /* Fuente */
-        font-size: medium; /* Tamaño de fuente medio */
-    }
-    
-    th {
-        text-align: center; /* Alineación del texto centrada */
-        font-family: "Montserrat_bold"; /* Fuente */
-        font-size: large; /* Tamaño de fuente grande */
-        height: 30px; /* Altura del 30px */
-        background-color: #e6d5c1; /* Color de fondo */
-    }
-    
-    figcaption {
-        font-family: "Montserrat_bold"; /* Fuente */
-        font-size: 14px; /* Tamaño de fuente */
-        color: #be4c54; /* Color del texto */
-        text-align: center; /* Alineación del texto centrada */
+        max-height: 90%;
+        max-width: 90%;
+        width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+        height: auto; /* Establece la altura máxima de la imagen al 100% del contenedor */
     }
   }
   
