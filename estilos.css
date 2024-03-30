@@ -462,4 +462,160 @@ figcaption {
   /* Consulta de medios para pantallas de escritorio (>1200px) */
   @media only screen and (min-width: 1201px) {
     /* Estilos específicos para pantallas de más de 1200px de ancho */
+    * {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .header{
+        position: fixed;
+        width: 100vw;
+        background-color: #785d56;
+        height: 34%;
+        z-index: 1000; /* Asegura que el header esté por encima del contenido */
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } 
+    /* quitamos el margen y el padding del ul y el ul li de la barra de navegacion para poder centrar los botones de la barra*/
+    /* Estilo de la lista no ordenada */
+    nav ul {
+        display: flex; /* Display como flexbox */
+        flex-direction: column;
+    }
+    /* Estilo de los enlaces de la barra de navegación */
+    nav ul li a {
+        padding: 3px;
+        color: #e6d5c1; /* Color del texto */
+        text-decoration: none; /* Sin decoración de texto */
+        text-transform: uppercase; /* Transforma el texto a mayúsculas */
+        font-size: smaller; /* Tamaño de fuente */
+        font-family: 'Montserrat_bold'; /* Fuente */
+    }
+    /* El siguiente estilo es para cuadrar la imagen centrada en un contenedor */
+    .contenedorcol {
+        display: inline-block;
+        position: absolute;
+        overflow: visible;
+        box-sizing: border-box;
+        flex-direction: column;
+        left: 50%; /* Ubica el div en el centro horizontal */
+        top: 50%;
+        width: 80vw;
+        height: 100vh;
+        margin-top: 45%;
+        transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+    }
+    .contenedorrow {
+        flex-direction: column;
+        overflow: visible;
+        box-sizing: border-box;
+        width: 100%;
+        display: inline-block;
+    }
+    .contenedorleft{
+        width: 100%;  
+        min-height: fit-content; 
+        max-height: 20%;
+        justify-content: center;
+    }
+    .contenedorright{
+        width: 100%; 
+        height: inherit; 
+        justify-content: center;  
+    }
+    /* Estilo del panel usado en cada página web para cuadrar el texto y el contenido */
+    .panel {
+        position: absolute;
+        flex-direction: column;
+        overflow: visible;
+        left: 50%; /* Ubica el div en el centro horizontal */
+        top: 50%;
+        width: 80vw;
+        margin-top: 40%;
+        height: 100vh;
+        transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+    }
+    .panel_dos {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('imagenes/textos.png');
+        background-position: center; /* Centra la imagen de fondo */
+        position: absolute;
+        flex-direction: column;
+        overflow: visible;
+        left: 50%; /* Ubica el div en el centro horizontal */
+        top: 50%;
+        width: 80vw;
+        margin-top: 40%;
+        height: 100vh;
+        transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+        line-height: 1.5;
+    }
+    .titulohead{
+        font-family: "Montserrat_black";
+        color: #e6d5c1;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 1%;
+    }
+    .text_index{
+        font-family: "Montserrat_black";
+        position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #785d56;
+        font-size: 4rem;
+        padding-top: 2%;
+        padding-left: 2%;
+    }
+    /*Texto del inicio al cual le aplicamos una transicion que cambia su color durante 2 segundos*/
+    .text_index_trans{
+        font-family: "Montserrat_black";
+        position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #785d56;
+        font-size: 3rem;
+        padding: 2%;
+        text-align: center;
+        transition: color 2s;
+    }
+    .text_index_trans:hover{
+        font-family: "Montserrat_black";
+        position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #be4c54;
+        font-size: 3rem;
+        cursor:pointer
+    }
+    .text_intro{
+        font-family: "Montserrat_light";
+        position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #be4c54;
+        font-size: 1rem;
+        padding: 2%;
+    }
+    .text_titulo {
+        font-size:x-large; /* Tamaño de fuente */
+        color: #785d56; /* Color del texto */
+        font-family: "Montserrat_black"; /* Fuente */
+        text-align: left; /* Alineación del texto */
+        padding: 1%;
+    }
+    .img_dos {
+        padding: 2%;
+        align-items: center;
+        max-height: 90%;
+        max-width: 90%;
+        width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+        height: auto; /* Establece la altura máxima de la imagen al 100% del contenedor */
+    }
   }
