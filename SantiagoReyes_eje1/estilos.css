@@ -130,6 +130,20 @@ nav ul li a:hover {
     transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
 }
 
+.panel_dos {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('imagenes/textos.png');
+    background-position: center; /* Centra la imagen de fondo */
+    position: absolute;
+    flex-direction: column;
+    overflow: visible;
+    left: 50%; /* Ubica el div en el centro horizontal */
+    top: 50%;
+    width: 80vw;
+    margin-top: 150px;
+    height: 100vh;
+    transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
+}
+
 .titulohead{
     font-family: "Montserrat_black";
     color: #e6d5c1;
@@ -177,6 +191,13 @@ nav ul li a:hover {
     font-family: "Montserrat_regular"; /* Fuente */
 }
 
+.text_dos {
+    padding: 2%;
+    font-size: medium; /* Tamaño de fuente */
+    color: #be4c54; /* Color del texto */
+    font-family: "Montserrat_bold"; /* Fuente */
+}
+
 /* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto */
 .img_uno{
     float: left;
@@ -185,17 +206,9 @@ nav ul li a:hover {
     border-radius: 5pt; /* Redondea los bordes de la imagen */
 }
 
-.contenedor2 {
-	flex: 0;
-    display: flex;
-	flex-direction: row;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    height: 300px; /* Ajusta la altura según sea necesario */
-}
-
 .img_dos {
+    padding: 2%;
+    align-items: center;
     max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
     max-height: 100%; /* Establece la altura máxima de la imagen al 100% del contenedor */
 }
@@ -204,15 +217,22 @@ nav ul li a:hover {
 .img_tres {
     float: right; /* Flota la imagen a la derecha del texto */
     margin-left: 20pt; /* Margen izquierdo para separar la imagen del texto */
-    border-radius: 5pt; /* Borde redondeado */
 }
 
-ul {
+.list_uno {
     font-size: medium; /* Tamaño de fuente medio */
-    color: black; /* Color del texto */
+    color: #be4c54; /* Color del texto */
     font-family: "Montserrat_bold"; /* Fuente */
 }
 
+.video{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6d5c1;
+}
 
 table {
     width: 100%; /* Ancho del 100% */
@@ -220,11 +240,11 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd; /* Borde de 1 píxel sólido */
+    border: 1px solid #e6d5c1; /* Borde de 1 píxel sólido */
     padding: 8px; /* Relleno */
     text-align: center; /* Alineación del texto centrada */
     height: 20px; /* Altura del 20px */
-    font-family: "Montserrat_thin"; /* Fuente */
+    font-family: "Montserrat_regular"; /* Fuente */
     font-size: medium; /* Tamaño de fuente medio */
 }
 
@@ -233,12 +253,12 @@ th {
     font-family: "Montserrat_bold"; /* Fuente */
     font-size: large; /* Tamaño de fuente grande */
     height: 30px; /* Altura del 30px */
-    background-color: #E9ECEE; /* Color de fondo */
+    background-color: #e6d5c1; /* Color de fondo */
 }
 
 figcaption {
-    font-family: "Montserrat_thin"; /* Fuente */
+    font-family: "Montserrat_bold"; /* Fuente */
     font-size: 14px; /* Tamaño de fuente */
-    color: black; /* Color del texto */
+    color: #be4c54; /* Color del texto */
     text-align: center; /* Alineación del texto centrada */
 }
