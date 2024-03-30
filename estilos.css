@@ -306,7 +306,7 @@ figcaption {
         position: fixed;
         width: 100vw;
         background-color: #785d56;
-        height: 30%;
+        height: 34%;
         z-index: 1000; /* Asegura que el header esté por encima del contenido */
     }
 
@@ -342,18 +342,16 @@ figcaption {
     .contenedorcol {
         display: inline-block;
         flex-direction: column;
-        position: absolute;
         left: 50%; /* Ubica el div en el centro horizontal */
         top: 50%;
         width: 80vw;
         height: 100vh;
-        margin-top: 40%;
+        margin-top: 45%;
         transform: translate(-50%, -50%); /* Centra el div exactamente en el centro */
     }
     
     .contenedorrow {
         flex-direction: column;
-        padding: 2%;
         width: 100%;
         display: inline-block;
     }
@@ -369,11 +367,9 @@ figcaption {
     }
     .contenedorleft{
         width: 100%;    
-        overflow: hidden;
     }
     .contenedorright{
         width: 100%;    
-        overflow: hidden;
     }
     .contenedordown_index{
         height: 100%;
@@ -413,7 +409,7 @@ figcaption {
     .titulohead{
         font-family: "Montserrat_black";
         color: #e6d5c1;
-        font-size: 1.7rem;
+        font-size: 1rem;
         text-align: center;
         padding-top: 2%;
     }
