@@ -30,7 +30,17 @@
     src: url('../Fuentes/Play-Regular.ttf');     /* indica su ubicación */
 }
 
-.theme_prin { color: white !important; background-color: #606d80 !important;}
+/*Definimos la paleta de colores que usaremos como variables*/
+:root{
+    --yale-blue: #134074ff;
+    --berkeley-blue: #13315cff;
+    --oxford-blue: #0b2545ff;
+    --powder-blue: #8da9c4ff;
+    --mint-cream: #eef4edff;
+    --brown:#7f5539
+}
+
+.theme_prin { color: var(--mint-cream) !important; background-color: var(--yale-blue) !important;}
 .text-theme { color: #000000 !important; }
 
 /* Aplicamos a cada estilo lo siguiente*/
@@ -71,7 +81,7 @@ header{
     height: 100%;
     width: 22%;
     align-items: center;  
-    background-color: #dce0e6;  
+    background-color: var(--mint-cream);  
 }
     
 /* Quitamos el margen y el padding del ul y el ul li de la barra de navegación para poder centrar los botones de la barra */
@@ -92,13 +102,13 @@ nav ul li a {
     text-decoration: none; /* Sin decoración de texto */
     font-size: larger; /* Tamaño de fuente */
     font-family: "LibreBodoni_bold";
-    color: #606d80;
+    color: var(--brown);
     list-style: none; /* Para quitar los puntos de la lista si los hubiera */
 }
 
 /* Estilo del enlace de la barra de navegación al pasar el mouse */
 nav ul li a:hover {
-    color: white; /* Cambia el color del texto al pasar el mouse */
+    color: var(--yale-blue); /* Cambia el color del texto al pasar el mouse */
 }
 
 /*Los siguientes estilos generan el menu desplegable, el cual nos permitira acceder al menu cuando las
@@ -257,6 +267,81 @@ figcaption {
     text-align: center; /* Alineación del texto centrada */
 }
 
+#slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    animation: slide 10s infinite alternate;
+}
+
+.slider {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.image img {
+    width: 80%;
+    height: auto;
+}
+
+/* Puntos de navegación */
+.switch ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.switch li {
+    margin: 0 5px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: var(--mint-cream);
+    border-radius: 50%;
+}
+
+.switch .on {
+    background-color: #333;
+}
+
+/* Animación de desplazamiento */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.text_res{
+    padding: 50px;
+    font-family: "LibreBodoni_bolditalic";
+    font-size: medium;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.column {
+    flex: 0 0 33%; /* Cada columna ocupa 1/3 del ancho disponible */
+    padding: 5px;
+}
+  
+.column img {
+    width: 100%;
+    height: auto;
+}
+  
 /*Modificamos los estilos para que se adapten a las distintas pantallas haciendo la pagina responsive*/
 /* Consulta de medios para teléfonos celulares en sentido vertical (<800px) */
 @media only screen and (max-width: 800px) {
@@ -288,7 +373,7 @@ figcaption {
         width: 40%;
         height: 70%;
         margin-top: 10%;
-        background-color: #dce0e6;
+        background-color: var(--mint-cream);
         z-index: 1000;
     }
 
@@ -298,6 +383,7 @@ figcaption {
     
     /* Quitamos el margen y el padding del ul y el ul li de la barra de navegación para poder centrar los botones de la barra */
     nav ul {
+        margin: 10%;
         display: flex;
         flex-direction: column;
     }
@@ -308,13 +394,13 @@ figcaption {
         text-decoration: none; /* Sin decoración de texto */
         font-size: large; /* Tamaño de fuente */
         font-family: "LibreBodoni_bold";
-        color: #606d80;
+        color: var(--brown);
         list-style: none; /* Para quitar los puntos de la lista si los hubiera */
     }
 
     /* Estilo del enlace de la barra de navegación al pasar el mouse */
     nav ul li a:hover {
-        color: white; /* Cambia el color del texto al pasar el mouse */
+        color: var(--yale-blue); /* Cambia el color del texto al pasar el mouse */
     }
 
     header {
@@ -330,7 +416,6 @@ figcaption {
         padding-left: 2%;
         width: 100%;
         justify-content: space-between;
-        border: 4px solid green;
         padding-bottom: 10%;
     }
 
@@ -370,7 +455,7 @@ figcaption {
         height: 100%;
         width: 22%;
         align-items: center;  
-        background-color: #dce0e6;  
+        background-color: var(--mint-cream);  
     }
         
     /* Quitamos el margen y el padding del ul y el ul li de la barra de navegación para poder centrar los botones de la barra */
@@ -391,7 +476,7 @@ figcaption {
         text-decoration: none; /* Sin decoración de texto */
         font-size: large; /* Cambia el tamaño de fuente */
         font-family: "LibreBodoni_bold";
-        color: #606d80;
+        color: var(--brown);
         list-style: none; /* Para quitar los puntos de la lista si los hubiera */
     }
 
@@ -402,9 +487,9 @@ figcaption {
         flex-direction: column;
         padding-top: 18%;
         justify-content: space-between;
-        border: 4px solid green;
         padding-bottom: 10%;
     }
+
 }
 
 /* Consulta de medios para pantallas de escritorio (>1200px) */
