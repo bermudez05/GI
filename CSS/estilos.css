@@ -197,6 +197,11 @@ footer {
     height: 3px;
 }
 
+hr{
+    color: var(--mint-cream);
+    margin: 10px;
+}
+
 /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
 .panel{
     overflow: hidden;
@@ -208,6 +213,19 @@ footer {
     padding-bottom: 5%;
 }
 
+/*Panel/Contenedor que nos permite organizar su contenido en columnas*/
+.panel_background{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12%;
+    padding-left: 24%;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.imeditores.com/banocc/universo/fotos/thumbs/125.jpg'); /*Permite bajarle la opacidad al fondo sin modificar la opacidad del texto contenido*/
+}
+
+/*Estilo para un contenedor que organice los elementos internos en filas*/
 .contenedor {
     overflow: hidden;
     display: flex;
@@ -219,16 +237,30 @@ footer {
     padding-bottom: 5%;
 }
 
+/*Establecemos el estilo de los headers 2 del elemento panel*/
 .panel h2 {
     padding: 5px;
     font-family: "Play_bold";
 }
 
+/*Establecemos el estilo de los parrafos del elemento panel*/
 .panel p {
     padding: 5px;
     font-family: "Play";
 }
 
+.panel_background h2{
+    padding: 5px;
+    font-family: "Play_bold";  
+}
+
+.panel_background p{
+    padding: 5px;
+    font-family: "Play";
+}
+
+/*Con los siguientes estilos card buscamos crear tres recuadros horizontales donde acomodar fotos
+con informacion relevante y su titulo correspondiente*/
 .card {
     width: 30%; /* Ajusta el ancho de las cartas según sea necesario */
     border: 1px solid #f4f3f3;
@@ -238,21 +270,25 @@ footer {
     margin-bottom: 20px;
 }
 
+/*Establecemos el estilo de las imagenes del elemento card*/
 .card img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/*Estilo encargado del contenido del card donde ira la imagen*/
 .card-content {
     padding: 20px;
 }
 
+/*Establecemos el estilo de los headers 2 del elemento card-content*/
 .card-content h2 {
     margin-top: 0;
     font-family: "Play_bold";
 }
 
+/*Establecemos el estilo de los parrafos del elemento card-content*/
 .card-content p {
     padding: 10px;
     margin-bottom: 0;
@@ -267,6 +303,11 @@ figcaption {
     text-align: center; /* Alineación del texto centrada */
 }
 
+/*Buscamos crear un slideshow animado que se dezplace entre imagenes de forma automatica y constante*/
+/*
+    El uso de # se utiliza para seleccionar elementos por su id, mientras que . se utiliza para seleccionar elementos por su clase. 
+    Especificamos un estilo especifico para realizar el slider.
+*/
 #slider {
     width: 100%;
     max-width: 800px;
@@ -276,7 +317,8 @@ figcaption {
 
 .slides {
     display: flex;
-    animation: slide 10s infinite alternate;
+    /* Se aplica la animación "slide" durante 10 segundos, infinitamente, alternando entre las iteraciones */
+    animation: slide 20s infinite alternate;
 }
 
 .slider {
@@ -284,62 +326,81 @@ figcaption {
     position: relative;
 }
 
+/*Estilo de la imagen contenida en el slider*/
 .image img {
     width: 80%;
     height: auto;
 }
 
-/* Puntos de navegación */
-.switch ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.switch li {
-    margin: 0 5px;
-    cursor: pointer;
-    width: 10px;
-    height: 10px;
-    background-color: var(--mint-cream);
-    border-radius: 50%;
-}
-
-.switch .on {
-    background-color: #333;
-}
-
 /* Animación de desplazamiento */
 @keyframes slide {
+    /* Define la animación para desplazar los elementos de la lista */
     0% {
         transform: translateX(0);
     }
+    /* Desplaza los elementos hacia la izquierda, simulando un efecto de slider */
     100% {
         transform: translateX(-200%);
     }
 }
 
+/*Texto resaltado y en italica
+Proposito: resaltar citas*/
 .text_res{
     padding: 50px;
     font-family: "LibreBodoni_bolditalic";
     font-size: medium;
 }
 
+/*Estilo que brinda la organizacion de una galeria fotografica*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 5px;
 }
-  
-.column {
+
+/*Filas de la galeria*/
+.row {
     flex: 0 0 33%; /* Cada columna ocupa 1/3 del ancho disponible */
     padding: 5px;
 }
+
+/*Columnas de la galeria, permite 4 filas */
+.column {
+    flex: 0 0 20%; /* Cada columna ocupa 1/3 del ancho disponible */
+}
   
+/*Asociamos un estilo a cada clase img que este contenida en columna*/
 .column img {
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+/*Asociamos un estilo a cada caption de imagen que este contenida en columna*/
+.column figcaption{
+    font-family: "LibreBodoni_italic"; /* Fuente */
+    padding: 2px;
+    font-size: 10px; /* Tamaño de fuente */
+    color: #567ebb; /* Color del texto */
+    text-align: left; /* Alineación del texto centrada */ 
+}
+
+/* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto cuando la imagen esta contenida en un parrafo de un panel*/
+.panel p img{
+    float: left;
+    margin-right: 20pt;
+	margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+
+/*Imagen a la derecha, estilo para parrafos
+El !important nos permite que el estilo se aplique sobre cualquier otro*/
+.img_right{
+    float: right !important;
+    margin-left: 20pt !important;
+	margin-top: 20pt !important;
+    margin-bottom: 20pt !important;
 }
   
 /*Modificamos los estilos para que se adapten a las distintas pantallas haciendo la pagina responsive*/
@@ -417,6 +478,18 @@ figcaption {
         width: 100%;
         justify-content: space-between;
         padding-bottom: 10%;
+    }
+
+    /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
+    .panel_background{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30%;
+        padding-left: 2%;
+        justify-content: space-between;
+        padding-bottom: 10%;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.imeditores.com/banocc/universo/fotos/thumbs/125.jpg'); /*Permite bajarle la opacidad al fondo sin modificar la opacidad del texto contenido*/
     }
 
     .contenedor {
