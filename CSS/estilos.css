@@ -41,7 +41,7 @@
 }
 
 .theme_prin { color: var(--mint-cream) !important; background-color: var(--yale-blue) !important;}
-.text-theme { color: #000000 !important; }
+.text-theme { color: #000000 !important; font-family: "LibreBodoni_medium"; }
 
 /* Aplicamos a cada estilo lo siguiente*/
 *{
@@ -100,7 +100,7 @@ nav ul li {
 nav ul li a {
     padding: 15px;
     text-decoration: none; /* Sin decoración de texto */
-    font-size: larger; /* Tamaño de fuente */
+    font-size: 20px; /* Tamaño de fuente */
     font-family: "LibreBodoni_bold";
     color: var(--brown);
     list-style: none; /* Para quitar los puntos de la lista si los hubiera */
@@ -192,6 +192,11 @@ footer {
     text-align: center;
 }
 
+ul li{
+    font-family: "LibreBodoni_italic";
+    font-size: large;
+}
+
 .bar {
     width: 100%;
     height: 3px;
@@ -211,6 +216,7 @@ hr{
     padding-left: 24%;
     justify-content: space-between;
     padding-bottom: 5%;
+    padding-right: 2%;
 }
 
 /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
@@ -392,6 +398,8 @@ Proposito: resaltar citas*/
     margin-right: 20pt;
 	margin-top: 20pt;
     margin-bottom: 20pt;
+    width: 20%;
+    height: 20%;
 }
 
 /*Imagen a la derecha, estilo para parrafos
@@ -402,7 +410,31 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
 	margin-top: 20pt !important;
     margin-bottom: 20pt !important;
 }
-  
+
+table {
+    width: 100%; /* Ancho del 100% */
+    border-collapse: collapse; /* Colapso de borde de tabla */
+}
+
+th, td {
+    border: 1px solid var(--berkeley-blue); /* Borde de 1 píxel sólido */
+    padding: 8px; /* Relleno */
+    text-align: center; /* Alineación del texto centrada */
+    height: 20px; /* Altura del 20px */
+    font-family: "Play"; /* Fuente */
+    font-size: medium; /* Tamaño de fuente medio */
+}
+
+th {
+    text-align: center; /* Alineación del texto centrada */
+    font-family: "Play_bold"; /* Fuente */
+    font-size: large; /* Tamaño de fuente grande */
+    height: 30px; /* Altura del 30px */
+    color: var(--berkeley-blue);
+    background-color: var(--mint-cream); /* Color de fondo */
+}
+
+
 /*Modificamos los estilos para que se adapten a las distintas pantallas haciendo la pagina responsive*/
 /* Consulta de medios para teléfonos celulares en sentido vertical (<800px) */
 @media only screen and (max-width: 800px) {
@@ -412,6 +444,10 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
         padding: 0;
         overflow-x: hidden;
         box-sizing: border-box;
+    }
+
+    .textLarge { 
+        font-size: 35px!important; 
     }
 
     .nav-toggle {
@@ -453,7 +489,7 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
     nav ul li a {
         padding: 7px;
         text-decoration: none; /* Sin decoración de texto */
-        font-size: large; /* Tamaño de fuente */
+        font-size: 16px; /* Tamaño de fuente */
         font-family: "LibreBodoni_bold";
         color: var(--brown);
         list-style: none; /* Para quitar los puntos de la lista si los hubiera */
@@ -477,19 +513,7 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
         padding-left: 2%;
         width: 100%;
         justify-content: space-between;
-        padding-bottom: 10%;
-    }
-
-    /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
-    .panel_background{
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        padding-top: 30%;
-        padding-left: 2%;
-        justify-content: space-between;
-        padding-bottom: 10%;
-        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.imeditores.com/banocc/universo/fotos/thumbs/125.jpg'); /*Permite bajarle la opacidad al fondo sin modificar la opacidad del texto contenido*/
+        padding-bottom: 20%;
     }
 
     .contenedor {
@@ -508,6 +532,39 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
         overflow: hidden;
         box-shadow: 0 0 10px rgba(182, 182, 182, 0.1);
         margin-bottom: 20px;
+    }
+
+    /* Animación de desplazamiento */
+    @keyframes slide {
+        /* Define la animación para desplazar los elementos de la lista */
+        0% {
+            transform: translateX(0);
+        }
+        /* Desplaza los elementos hacia la izquierda, simulando un efecto de slider */
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+        /* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto cuando la imagen esta contenida en un parrafo de un panel*/
+    .panel p img{
+        float: left;
+        margin-right: 20pt;
+        margin-top: 20pt;
+        margin-bottom: 20pt;
+        width: 50%;
+        height: 50%;
+    }
+
+    /*Imagen a la derecha, estilo para parrafos
+    El !important nos permite que el estilo se aplique sobre cualquier otro*/
+    .img_right{
+        float: right !important;
+        margin-left: 20pt !important;
+        margin-top: 20pt !important;
+        margin-bottom: 20pt !important;
+        width: 50%;
+        height: 50%;
     }
 }
   
@@ -547,7 +604,7 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
     nav ul li a {
         padding: 7px;
         text-decoration: none; /* Sin decoración de texto */
-        font-size: large; /* Cambia el tamaño de fuente */
+        font-size: 20px; /* Cambia el tamaño de fuente */
         font-family: "LibreBodoni_bold";
         color: var(--brown);
         list-style: none; /* Para quitar los puntos de la lista si los hubiera */
@@ -560,13 +617,414 @@ El !important nos permite que el estilo se aplique sobre cualquier otro*/
         flex-direction: column;
         padding-top: 18%;
         justify-content: space-between;
-        padding-bottom: 10%;
+        padding-bottom: 20%;
     }
 
+        /* Animación de desplazamiento */
+    @keyframes slide {
+        /* Define la animación para desplazar los elementos de la lista */
+        0% {
+            transform: translateX(0);
+        }
+        /* Desplaza los elementos hacia la izquierda, simulando un efecto de slider */
+        100% {
+            transform: translateX(0%);
+        }
+    }
 }
 
 /* Consulta de medios para pantallas de escritorio (>1200px) */
 @media only screen and (min-width: 1201px) {
     /* Estilos específicos para pantallas de más de 1200px de ancho */
     /* El diseño inicial se planeo para este tipo de pantallas por lo tanto no resulta necesario especificar algun cambio en el diseño*/
+/* Aplicamos a cada estilo lo siguiente*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header{
+        font-family: "LibreBodoni_bold";
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 22%;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .center{
+        padding-top: 3%;
+        text-align: center;
+    }
+
+    .textLarge { 
+        font-size: 48px!important; 
+    }
+
+    @keyframes animatebottom { from { bottom: -300px; opacity: 0; } to { bottom: 0; opacity: 1; } }
+    .animateBott { 
+        position: relative; animation: animatebottom 0.4s; 
+    }
+
+    /* establecemos un estilo para la barra de navegacion, centrando los botones de seleccion 
+        su posicion esta fija de modo que se mantendra en la misma y se encuentra ubicada en el lado derecho de la pagina*/
+    .navbar {
+        position: fixed;
+        height: 100%;
+        width: 22%;
+        align-items: center;  
+        background-color: var(--mint-cream);  
+    }
+        
+    /* Quitamos el margen y el padding del ul y el ul li de la barra de navegación para poder centrar los botones de la barra */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60%;
+    }
+        
+    nav ul li {
+        padding: 10px;
+        overflow: hidden;
+    }
+        
+    /* Establecemos el estilo de los botones */
+    nav ul li a {
+        padding: 15px;
+        text-decoration: none; /* Sin decoración de texto */
+        font-size: 20px; /* Tamaño de fuente */
+        font-family: "LibreBodoni_bold";
+        color: var(--brown);
+        list-style: none; /* Para quitar los puntos de la lista si los hubiera */
+    }
+
+    /* Estilo del enlace de la barra de navegación al pasar el mouse */
+    nav ul li a:hover {
+        color: var(--yale-blue); /* Cambia el color del texto al pasar el mouse */
+    }
+
+    /*Los siguientes estilos generan el menu desplegable, el cual nos permitira acceder al menu cuando las
+    dimensiones de la pantalla disminuyan*/
+    /* Ocultamos el checkbox para el botón de menú desplegable */
+    .nav-toggle {
+        display:none;
+    }
+
+    /* Estilizamos la etiqueta para el botón de menú desplegable */
+    .nav-toggle-label {
+        display: none; /* Ocultamos la etiqueta por defecto */
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        z-index: 999;
+        overflow: visible; /*Permitimos que el objeto se vea completo sin ningun scroll*/
+    }
+    
+    /* Estilizamos las tres líneas horizontales que generan el botón del menú desplegable */
+    .nav-toggle-label span {
+        background: #fff;
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 10px auto;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    
+    /* Los siguientes tres estilos aplicados sobre la etiqueta de la barra de navegacion nos permite generara las tres lineas
+    del menu desplegable*/
+    .nav-toggle-label span:first-child {
+        margin-top: 0;
+        width: 45px;
+    }
+    
+    /* Estilizamos la primera línea del botón del menú desplegable */
+    .nav-toggle-label span:nth-child(2) {
+        width: 45px;
+    }
+    /* Estilizamos la segunda línea del botón del menú desplegable */
+    .nav-toggle-label span:nth-child(3) {
+        width: 45px;
+    }
+
+    /* el estilo especificado se aplicará a los elementos <span> que son el primer hijo directo del elemento 
+    .nav-toggle-label, pero solo si el elemento .nav-toggle está seleccionado (es decir, está "checked").*/
+
+    /* Estilizamos la primera línea del botón del menú depslegable cuando el checkbox está marcado */
+    .nav-toggle:checked ~ .nav-toggle-label span:first-child {
+        transform: rotate(45deg) translate(10px, 10px);
+        background: white;
+    }
+    
+    /* ocultamos la linea del medio, ya que la idea es realizar una transformacion tipo transicion que convierta el menu
+    en una X*/
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    /* Estilizamos la tercera línea del botón del menú depslegable cuando el checkbox está marcado */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -10px);
+        background: white;
+    }
+        
+    /* establecemos el estilo del pie de pagina*/
+    footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 10pt;
+        font-size:medium;
+        font-family: 'LibreBodoni_regular-24';
+        background-color: #dce0e6;
+        text-align: center;
+    }
+
+    ul li{
+        font-family: "LibreBodoni_italic";
+        font-size: large;
+    }
+
+    .bar {
+        width: 100%;
+        height: 3px;
+    }
+
+    hr{
+        color: var(--mint-cream);
+        margin: 10px;
+    }
+
+    /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
+    .panel{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-top: 15%;
+        padding-left: 24%;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        padding-right: 2%;
+    }
+
+    /*Panel/Contenedor que nos permite organizar su contenido en columnas*/
+    .panel_background{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-top: 12%;
+        padding-left: 24%;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.imeditores.com/banocc/universo/fotos/thumbs/125.jpg'); /*Permite bajarle la opacidad al fondo sin modificar la opacidad del texto contenido*/
+    }
+
+    /*Estilo para un contenedor que organice los elementos internos en filas*/
+    .contenedor {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        padding: 2%;
+        padding-bottom: 5%;
+    }
+
+    /*Establecemos el estilo de los headers 2 del elemento panel*/
+    .panel h2 {
+        padding: 5px;
+        font-family: "Play_bold";
+    }
+
+    /*Establecemos el estilo de los parrafos del elemento panel*/
+    .panel p {
+        padding: 5px;
+        font-family: "Play";
+    }
+
+    .panel_background h2{
+        padding: 5px;
+        font-family: "Play_bold";  
+    }
+
+    .panel_background p{
+        padding: 5px;
+        font-family: "Play";
+    }
+
+    /*Con los siguientes estilos card buscamos crear tres recuadros horizontales donde acomodar fotos
+    con informacion relevante y su titulo correspondiente*/
+    .card {
+        width: 30%; /* Ajusta el ancho de las cartas según sea necesario */
+        border: 1px solid #f4f3f3;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(182, 182, 182, 0.1);
+        margin-bottom: 20px;
+    }
+
+    /*Establecemos el estilo de las imagenes del elemento card*/
+    .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /*Estilo encargado del contenido del card donde ira la imagen*/
+    .card-content {
+        padding: 20px;
+    }
+
+    /*Establecemos el estilo de los headers 2 del elemento card-content*/
+    .card-content h2 {
+        margin-top: 0;
+        font-family: "Play_bold";
+    }
+
+    /*Establecemos el estilo de los parrafos del elemento card-content*/
+    .card-content p {
+        padding: 10px;
+        margin-bottom: 0;
+        font-family: "Play";
+    }
+
+    figcaption {
+        font-family: "LibreBodoni_italic"; /* Fuente */
+        padding: 2px;
+        font-size: 14px; /* Tamaño de fuente */
+        color: #567ebb; /* Color del texto */
+        text-align: center; /* Alineación del texto centrada */
+    }
+
+    /*Buscamos crear un slideshow animado que se dezplace entre imagenes de forma automatica y constante*/
+    /*
+        El uso de # se utiliza para seleccionar elementos por su id, mientras que . se utiliza para seleccionar elementos por su clase. 
+        Especificamos un estilo especifico para realizar el slider.
+    */
+    #slider {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: flex;
+        /* Se aplica la animación "slide" durante 10 segundos, infinitamente, alternando entre las iteraciones */
+        animation: slide 20s infinite alternate;
+    }
+
+    .slider {
+        flex: 0 0 100%;
+        position: relative;
+    }
+
+    /*Estilo de la imagen contenida en el slider*/
+    .image img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Animación de desplazamiento */
+    @keyframes slide {
+        /* Define la animación para desplazar los elementos de la lista */
+        0% {
+            transform: translateX(0);
+        }
+        /* Desplaza los elementos hacia la izquierda, simulando un efecto de slider */
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+
+    /*Texto resaltado y en italica
+    Proposito: resaltar citas*/
+    .text_res{
+        padding: 50px;
+        font-family: "LibreBodoni_bolditalic";
+        font-size: medium;
+    }
+
+    /*Estilo que brinda la organizacion de una galeria fotografica*/
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    /*Filas de la galeria*/
+    .row {
+        flex: 0 0 33%; /* Cada columna ocupa 1/3 del ancho disponible */
+        padding: 5px;
+    }
+
+    /*Columnas de la galeria, permite 4 filas */
+    .column {
+        flex: 0 0 20%; /* Cada columna ocupa 1/3 del ancho disponible */
+    }
+    
+    /*Asociamos un estilo a cada clase img que este contenida en columna*/
+    .column img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Asociamos un estilo a cada caption de imagen que este contenida en columna*/
+    .column figcaption{
+        font-family: "LibreBodoni_italic"; /* Fuente */
+        padding: 2px;
+        font-size: 10px; /* Tamaño de fuente */
+        color: #567ebb; /* Color del texto */
+        text-align: left; /* Alineación del texto centrada */ 
+    }
+
+    /* El siguiente estilo es para cuadrar la imagen al lado izquierdo del texto cuando la imagen esta contenida en un parrafo de un panel*/
+    .panel p img{
+        float: left;
+        margin-right: 20pt;
+        margin-top: 20pt;
+        margin-bottom: 20pt;
+        width: 20%;
+        height: 20%;
+    }
+
+    /*Imagen a la derecha, estilo para parrafos
+    El !important nos permite que el estilo se aplique sobre cualquier otro*/
+    .img_right{
+        float: right !important;
+        margin-left: 20pt !important;
+        margin-top: 20pt !important;
+        margin-bottom: 20pt !important;
+    }
+
+    table {
+        width: 100%; /* Ancho del 100% */
+        border-collapse: collapse; /* Colapso de borde de tabla */
+    }
+
+    th, td {
+        border: 1px solid var(--berkeley-blue); /* Borde de 1 píxel sólido */
+        padding: 8px; /* Relleno */
+        text-align: center; /* Alineación del texto centrada */
+        height: 20px; /* Altura del 20px */
+        font-family: "Play"; /* Fuente */
+        font-size: medium; /* Tamaño de fuente medio */
+    }
+
+    th {
+        text-align: center; /* Alineación del texto centrada */
+        font-family: "Play_bold"; /* Fuente */
+        font-size: large; /* Tamaño de fuente grande */
+        height: 30px; /* Altura del 30px */
+        color: var(--berkeley-blue);
+        background-color: var(--mint-cream); /* Color de fondo */
+    }
 }
