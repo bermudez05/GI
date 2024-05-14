@@ -103,7 +103,7 @@ en una X*/
 .header{
     position: fixed;
     width: 100vw;
-    background-color: #785d56;
+    background-color: #5e3929;
     height: 20%;
     z-index: 1000; /* Asegura que el header esté por encima del contenido */
 }
@@ -132,16 +132,22 @@ nav ul li {
 /* Estilo de los enlaces de la barra de navegación */
 nav ul li a {
     padding: 7px;
-    color: #e6d5c1; /* Color del texto */
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white; /* Color del texto */
     text-decoration: none; /* Sin decoración de texto */
     text-transform: uppercase; /* Transforma el texto a mayúsculas */
     font-size: medium; /* Tamaño de fuente */
     font-family: 'Montserrat_bold'; /* Fuente */
 }
 
+nav ul li:hover{
+    background-color: #cd8c52;
+}
+
 /* Estilo del enlace de la barra de navegación al pasar el mouse */
 nav ul li a:hover {
-    color: white; /* Cambia el color del texto al pasar el mouse */
+    color: #fcf7d3; /* Cambia el color del texto al pasar el mouse */
 }
 
 /* El siguiente div esta centrado en la pantalla y permite acomodar mas divs internos en modo de columnas */
@@ -162,6 +168,7 @@ nav ul li a:hover {
     flex-direction: row;
     width: 100%;
     height: 100vh;
+    text-align: justify;
 }
 
 /* Organiza todos los elementos internos en filas con una altura automatica dada por el contenido del elemento*/
@@ -169,6 +176,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: row;
     width: 100%;
+    text-align: justify;
 }
 
 /* Organiza todos los elementos internos en columnas adaptandose a los elementos que lo rodean pero ocupando todo el ancho de donde se encuentra*/
@@ -176,6 +184,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
+    text-align: justify;
 }
 
 /*Los dos siguientes estilos nos permitiran organizar la informacion de la pagina en dos columnas separadas*/
@@ -184,6 +193,7 @@ nav ul li a:hover {
     width: 50%;
     height: 100%;
     justify-content: center;
+    text-align: justify;
 }
 
 /*Contenedor centrado a la derecha*/
@@ -191,6 +201,7 @@ nav ul li a:hover {
     width: 50%;
     height: 100%;
     justify-content: center;
+    text-align: justify;
 }
 
 /*Contenedor ubicado al final de un elemnto*/
@@ -198,7 +209,8 @@ nav ul li a:hover {
     height: 100%;
     width: 100%;
     justify-content: center;
-    background-color: #fff4e3;
+    overflow: hidden;
+    text-align: justify;
 }
 
 /* Estilo del panel usado en cada página web para cuadrar el texto y el contenido */
@@ -229,24 +241,37 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
+hr{
+    color: #dee8be;
+    margin: 1%;
+}
+
+/* Definimos una animacion para que el titulo se mueva cada vez que se recarga la pagina */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .titulohead{
+    animation: slideIn 1s ease forwards; /* Agregamos la animacion al texto del header */
     font-family: "Montserrat_black";
-    color: #e6d5c1;
+    color: white;
     font-size: 1.7rem;
     text-align: center;
-    padding-top: 2%;
+    padding: 1%;
 }
 
 .text_index{
     font-family: "Montserrat_black";
-    position: relative; /*Establecemos que su posicion sea relativa con respecto al contenedor en el cual se ubica*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #785d56;
-    font-size: 4rem;
-    padding-top: 2%;
-    padding-left: 2%;
+    color: #b7d1a3;
+    padding: 2%;
+    font-size: 1.5rem;
 }
 
 /*Texto del inicio al cual le aplicamos una transicion que cambia su color durante 2 segundos*/
@@ -256,11 +281,11 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #785d56;
+    color: #5e3929;
     font-size: 4rem;
     padding-top: 2%;
     padding-left: 2%;
-    transition: color 2s;
+    transition: color 2s;  
 }
 
 .text_index_trans:hover{
@@ -269,7 +294,7 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #be4c54;
+    color: #b7d1a3;
     font-size: 4rem;
     padding-top: 2%;
     padding-left: 2%;
@@ -282,14 +307,14 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #be4c54;
+    color: black;
     font-size: 1rem;
     padding: 2%;
 }
 
 .text_titulo {
     font-size:x-large; /* Tamaño de fuente */
-    color: #785d56; /* Color del texto */
+    color: #5e3929; /* Color del texto */
     font-family: "Montserrat_black"; /* Fuente */
     text-align: left; /* Alineación del texto */
     padding: 1%;
@@ -299,14 +324,14 @@ nav ul li a:hover {
 .text_uno {
     padding: 2%;
     font-size: medium; /* Tamaño de fuente */
-    color: #785d56; /* Color del texto */
+    color: black; /* Color del texto */
     font-family: "Montserrat_regular"; /* Fuente */
 }
 
 .text_dos {
     padding: 2%;
     font-size: medium; /* Tamaño de fuente */
-    color: #be4c54; /* Color del texto */
+    color: #b7d1a3; /* Color del texto */
     font-family: "Montserrat_bold"; /* Fuente */
 }
 
@@ -333,17 +358,18 @@ nav ul li a:hover {
 
 .list_uno {
     font-size: medium; /* Tamaño de fuente medio */
-    color: #be4c54; /* Color del texto */
+    color: #cd8c52; /* Color del texto */
     font-family: "Montserrat_bold"; /* Fuente */
 }
 
 .video{
     display: flex;
     overflow: hidden;
-    height: 100%;
+    height: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #e6d5c1;
+    background-color: #b7d1a3;
+    padding: 2%;
 }
 
 table {
@@ -352,7 +378,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #e6d5c1; /* Borde de 1 píxel sólido */
+    border: 1px solid #cd8c52; /* Borde de 1 píxel sólido */
     padding: 8px; /* Relleno */
     text-align: center; /* Alineación del texto centrada */
     height: 20px; /* Altura del 20px */
@@ -365,14 +391,15 @@ th {
     font-family: "Montserrat_bold"; /* Fuente */
     font-size: large; /* Tamaño de fuente grande */
     height: 30px; /* Altura del 30px */
-    background-color: #e6d5c1; /* Color de fondo */
+    background-color: #cd8c52; /* Color de fondo */
 }
 
 figcaption {
     font-family: "Montserrat_bold"; /* Fuente */
     font-size: 14px; /* Tamaño de fuente */
-    color: #be4c54; /* Color del texto */
+    color: #b7d1a3; /* Color del texto */
     text-align: center; /* Alineación del texto centrada */
+    padding-bottom: 1%;
 }
 
 .bar {
