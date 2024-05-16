@@ -5,7 +5,9 @@
     <meta charset="UTF-8"/>
     <meta lang="es"/>
     <title>Universo marino de colombia</title>
+    <!-- Traemos el archivo que contiene los estilos de la pagina web -->
     <link href="CSS/estilos.css" rel="stylesheet" type="text/css">
+    <!-- Definimos el ancho, alto y escala del área usada por el navegador para mostrar contenido -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -20,15 +22,15 @@
 
     <!-- Conservamos el menu desplegable y el menu de navegación en el mismo contenedor para poder aplicar el despliegue-->
     <div>
-        <!-- Definimos el menú desplegable -->
-        <input id="toggle-menu" type="checkbox" class="nav-toggle">
+        <!-- Definimos el menú desplegable sin necesidad de js, haciendo uso de un checbox el cual 
+        se escondera en el estilo segun la pantalla en la que se despliegue -->        <input id="toggle-menu" type="checkbox" class="nav-toggle">
         <label for="toggle-menu" class="nav-toggle-label">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </label>
 
-        <!-- Barra de navegación-->
+        <!-- Barra de navegación con una animación para su aparición -->
         <nav class="navbar animateBott">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -37,14 +39,22 @@
                 <li><a href="OceanosMares.html">Oceanos y Mares de Colombia</a></li>
                 <li><a href="Mensajes.html">Los Mensajes del Mar</a></li>
                 <li><a href="Patrimonio.html">Nuestro Patrimonio Marítimo</a></li>
+                <li><a href="Mapa.html">Mapa</a></li>
                 <li><a href="Creditos.html">Creditos</a></li>
             </ul>
         </nav>
     </div>
 
+    <!-- Panel que contendra todo el contenido de la pagina, nos permitira organizar de forma visual todo el texto e imagenes que se mostraran -->
     <div class="panel" id="inicio2">
+
+      <!-- Usamos referencias e identificaciones para poder navegar sobre la misma pagina yendo al final y al inicio -->
       <p><a href="#final2">Ir al final de la pagina</a></p>
+
+      <!-- En esta pagina se mostrara una galeria de fotos, entonces establecemos el contenedor que tendra contenedores
+      donde se puedan organizar fotos en filas y columnas-->
       <div class="gallery">
+
           <!-- Primera columna de fotos-->
           <div class="column">
             <div class="row">
@@ -304,6 +314,8 @@
         cuerpos se han vuelto más livianos en comparación con las tortugas terrestres. Entre las especies más comunes se encuentran la 
         tortuga caguama, la verde, la carey y el tinglar, que habitan en aguas cálidas del océano tropical.
       </p>
+
+      <!-- Usamos referencias e identificaciones para poder navegar sobre la misma pagina yendo al final y al inicio -->
       <p id="final2"><a href="#inicio2">Ir al inicio de la pagina</a></p>
     </div>
 

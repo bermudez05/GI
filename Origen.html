@@ -5,8 +5,11 @@
     <meta charset="UTF-8"/>
     <meta lang="es"/>
     <title>Universo marino de colombia</title>
+    <!-- Traemos el archivo que contiene los estilos de la pagina web -->
     <link href="CSS/estilos.css" rel="stylesheet" type="text/css">
+    <!-- Definimos el ancho, alto y escala del área usada por el navegador para mostrar contenido -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/scripts.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +23,8 @@
 
     <!-- Conservamos el menu desplegable y el menu de navegación en el mismo contenedor para poder aplicar el despliegue-->
     <div>
-        <!-- Definimos el menú desplegable -->
+        <!-- Definimos el menú desplegable sin necesidad de js, haciendo uso de un checbox el cual 
+        se escondera en el estilo segun la pantalla en la que se despliegue -->
         <input id="toggle-menu" type="checkbox" class="nav-toggle">
         <label for="toggle-menu" class="nav-toggle-label">
           <span class="bar"></span>
@@ -28,8 +32,8 @@
           <span class="bar"></span>
         </label>
 
-        <!-- Barra de navegación-->
-        <nav class="navbar">
+        <!-- Barra de navegación con una animación para su aparición -->
+        <nav class="navbar animateBott">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Origen.html">El Origen del Planeta Azul</a></li>
@@ -37,37 +41,29 @@
                 <li><a href="OceanosMares.html">Oceanos y Mares de Colombia</a></li>
                 <li><a href="Mensajes.html">Los Mensajes del Mar</a></li>
                 <li><a href="Patrimonio.html">Nuestro Patrimonio Marítimo</a></li>
+                <li><a href="Mapa.html">Mapa</a></li>
                 <li><a href="Creditos.html">Creditos</a></li>
             </ul>
         </nav>
     </div>
 
+    <!-- Panel que contendra todo el contenido de la pagina, nos permitira organizar de forma visual todo el texto e imagenes que se mostraran -->
     <div class="panel" id="inicio">
 
-        <!-- Generamos un slideshow que se recorra de forma automatica tres imagenes -->
-        <div id="slider">
-            <div class="slides">
-                <div class="slider">
-                    <div class="image">
-                        <img src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/21.jpg" alt="Imagen 1">
-                        <figcaption> Fotógrafo: Camilo Gómez Durán </figcaption>
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="image">
-                        <img src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/23.jpg" alt="Imagen 2">
-                        <figcaption> Fotógrafo: Photos Images </figcaption>
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="image">
-                        <img src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/24.jpg" alt="Imagen 3">
-                        <figcaption> Fotógrafo: Camilo Gómez Durán </figcaption>
-                    </div>
-                </div>
-            </div>
+        <!-- Generamos un slideshow que se recorra tres imagenes al hacer click en las flechas correspondientes, usando el script de js denominado scripts  -->
+        <div class="slide-content">
+        
+            <!-- Definimos cada slide con una fotografia-->
+            <img class="mySlides" src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/21.jpg" style="width:100%">
+            <img class="mySlides" src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/23.jpg" style="width:100%">
+            <img class="mySlides" src="https://www.imeditores.com/banocc/universo/display_image.php?src=fotos/450x500/24.jpg" style="width:100%">
+            
+            <!-- Establecemos los botones que estaran asociados a una funcín de js cada vez que sea presionado, permitira movernos entre los slides -->
+            <a class="slide-button-left" onclick="plusDivs(-1)">❮</a>
+            <a class="slide-button-right" onclick="plusDivs(+1)">❯</a>
         </div>
 
+        <!-- Usamos referencias e identificaciones para poder navegar sobre la misma pagina yendo al final y al inicio -->
         <p><a href="#final">Ir al final de la pagina</a></p>
         <p>
             Hace unos 15.000 millones de años, el Big Bang creó el universo. Cerca de 10.400 millones de años después, 
@@ -176,6 +172,8 @@
             de altura—, donde se dan miles de interrelaciones entre organismos y especies, entre ellas y su medio, y entre éste y los 
             fenómenos físicos determinados por el globo." -Colombia Universo Submarino, Banco del Occidente
         </div>
+
+        <!-- Usamos referencias e identificaciones para poder navegar sobre la misma pagina yendo al final y al inicio -->
         <p><a href="#inicio">Ir al inicio de la pagina</a></p>
     </div>
 

@@ -309,45 +309,41 @@ figcaption {
     text-align: center; /* Alineación del texto centrada */
 }
 
-/*Buscamos crear un slideshow animado que se dezplace entre imagenes de forma automatica y constante*/
-/*
-    El uso de # se utiliza para seleccionar elementos por su id, mientras que . se utiliza para seleccionar elementos por su clase. 
-    Especificamos un estilo especifico para realizar el slider.
-*/
-#slider {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
+/* Buscamos crear un slideshow animado que se dezplace entre imagenes haciendo uso de JS para que el usuario pueda 
+interactuar con cada slide */
 
-.slides {
-    display: flex;
-    /* Se aplica la animación "slide" durante 10 segundos, infinitamente, alternando entre las iteraciones */
-    animation: slide 20s infinite alternate;
-}
-
-.slider {
-    flex: 0 0 100%;
+/* Estilos para el contenedor del slideshow */
+.slide-content {
     position: relative;
+    margin: auto; /* Centra el slideshow horizontalmente */
+    margin-bottom: 2%; /* Agrega un espacio abajo para evitar que queden pegado al texto*/
 }
 
-/*Estilo de la imagen contenida en el slider*/
-.image img {
-    width: 80%;
-    height: auto;
+/* Estilos para las diapositivas */
+.mySlides {
+    display: none; /* Oculta todas las diapositivas por defecto */
 }
 
-/* Animación de desplazamiento */
-@keyframes slide {
-    /* Define la animación para desplazar los elementos de la lista */
-    0% {
-        transform: translateX(0);
-    }
-    /* Desplaza los elementos hacia la izquierda, simulando un efecto de slider */
-    100% {
-        transform: translateX(-200%);
-    }
+/* Estilos para el botón de izquierda, al seleccionarse desplaza el slideshow a la izquierda */
+.slide-button-left {
+    background-color: #f1f1f1;
+    padding: 8px 8px;
+    font-size: 16px;
+    position:absolute;
+    cursor: pointer;
+    top:45%;
+    left:0;
+}
+
+/* Estilos para el botón de derecha, al seleccionarse desplaza el slideshow a la izquierda */
+.slide-button-right {
+    background-color: #f1f1f1;
+    font-size: 16px;
+    padding: 8px 8px;
+    position:absolute;
+    cursor: pointer;
+    top:45%;
+    right:0
 }
 
 /*Texto resaltado y en italica
@@ -433,7 +429,6 @@ th {
     color: var(--berkeley-blue);
     background-color: var(--mint-cream); /* Color de fondo */
 }
-
 
 /*Modificamos los estilos para que se adapten a las distintas pantallas haciendo la pagina responsive*/
 /* Consulta de medios para teléfonos celulares en sentido vertical (<800px) */
