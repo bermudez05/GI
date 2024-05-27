@@ -1,74 +1,81 @@
-var simplemaps_countrymap_mapdata={
+var simplemaps_countrymap_mapdata = {
   main_settings: {
-   //General settings
-    width: "responsive", //'700' or 'responsive'
-    background_color: "white",
-    background_transparent: "no",
-    border_color: "#ffffff",
-    state_description: "",
-    state_color: "#95aa61",
-    state_hover_color: "#d6e68a",
-    state_url: "",
-    border_size: 1.5,
-    all_states_inactive: "no",
-    all_states_zoomable: "yes",
-    location_description: "",
-    location_url: "",
-    location_color: "#9b0000",
-    location_opacity: 0.8,
-    location_hover_opacity: 1,
-    location_size: 25,
-    location_type: "circle",
-    location_image_source: "frog.png",
-    location_border_color: "#FFFFFF",
-    location_border: 2,
-    location_hover_border: 2.5,
-    all_locations_inactive: "no",
-    all_locations_hidden: "no",
-    
-    //Label defaults
-    label_color: "#ffffff",
-    label_hover_color: "#ffffff",
-    label_size: 16,
-    label_font: "Arial",
-    label_display: "auto",
-    label_scale: "yes",
-    hide_labels: "no",
-    hide_eastern_labels: "no",
-   
-    //Zoom settings
-    zoom: "yes",
-    manual_zoom: "yes",
-    back_image: "no",
-    initial_back: "no",
-    initial_zoom: "-10",
-    initial_zoom_solo: "yes",
-    region_opacity: 1,
-    region_hover_opacity: 0.6,
-    zoom_out_incrementally: "yes",
-    zoom_percentage: 0.99,
-    zoom_time: 0.5,
-    
-    //Popup settings
-    popup_color: "white",
-    popup_opacity: 0.9,
-    popup_shadow: 1,
-    popup_corners: 5,
-    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
-    popup_nocss: "no",
-    
-    //Advanced settings
-    div: "map",
-    auto_load: "yes",
-    url_new_tab: "no",
-    images_directory: "default",
-    fade_time: 0.1,
-    link_text: "View Website",
-    popups: "detect",
-    state_image_url: "",
-    state_image_position: "",
-    location_image_url: ""
+    // General settings
+    width: "responsive", // Define el ancho del mapa como 'responsive' para adaptarse al contenedor
+    background_color: "white", // Color de fondo del mapa
+    background_transparent: "no", // Si el fondo debe ser transparente
+    border_color: "#ffffff", // Color del borde de los estados
+    state_description: "", // Descripción predeterminada de los estados (vacía por defecto)
+    state_color: "#95aa61", // Color predeterminado de los estados
+    state_hover_color: "#d6e68a", // Color de los estados al pasar el ratón por encima
+    state_url: "", // URL predeterminada de los estados (vacía por defecto)
+    border_size: 1.5, // Tamaño del borde de los estados
+    all_states_inactive: "no", // Si todos los estados deben ser inactivos por defecto
+    all_states_zoomable: "yes", // Si todos los estados deben ser ampliables por defecto
+
+    // Location settings
+    location_description: "", // Descripción predeterminada de las ubicaciones (vacía por defecto)
+    location_url: "", // URL predeterminada de las ubicaciones (vacía por defecto)
+    location_color: "#9b0000", // Color predeterminado de las ubicaciones
+    location_opacity: 0.8, // Opacidad de las ubicaciones
+    location_hover_opacity: 1, // Opacidad de las ubicaciones al pasar el ratón por encima
+    location_size: 25, // Tamaño predeterminado de las ubicaciones
+    location_type: "circle", // Tipo de marcador de las ubicaciones (círculo)
+    location_image_source: "frog.png", // Fuente de la imagen de las ubicaciones
+    location_border_color: "#FFFFFF", // Color del borde de las ubicaciones
+    location_border: 2, // Tamaño del borde de las ubicaciones
+    location_hover_border: 2.5, // Tamaño del borde de las ubicaciones al pasar el ratón por encima
+    all_locations_inactive: "no", // Si todas las ubicaciones deben ser inactivas por defecto
+    all_locations_hidden: "no", // Si todas las ubicaciones deben estar ocultas por defecto
+
+    // Label defaults
+    label_color: "#ffffff", // Color predeterminado de las etiquetas
+    label_hover_color: "#ffffff", // Color de las etiquetas al pasar el ratón por encima
+    label_size: 16, // Tamaño de la fuente de las etiquetas
+    label_font: "Arial", // Fuente de las etiquetas
+    label_display: "auto", // Cómo se muestran las etiquetas
+    label_scale: "yes", // Si las etiquetas deben escalarse con el zoom
+    hide_labels: "no", // Si se deben ocultar las etiquetas
+    hide_eastern_labels: "no", // Si se deben ocultar las etiquetas del este
+
+    // Zoom settings
+    zoom: "yes", // Si el zoom está habilitado
+    manual_zoom: "yes", // Si el zoom manual está habilitado
+    back_image: "no", // Si se debe usar una imagen de fondo
+    initial_back: "no", // Si el fondo inicial debe ser visible
+    initial_zoom: "-10", // Nivel de zoom inicial
+    initial_zoom_solo: "yes", // Si solo se debe mostrar el nivel de zoom inicial
+    region_opacity: 1, // Opacidad de las regiones
+    region_hover_opacity: 0.6, // Opacidad de las regiones al pasar el ratón por encima
+    zoom_out_incrementally: "yes", // Si se debe hacer zoom out incrementalmente
+    zoom_percentage: 0.99, // Porcentaje de zoom
+    zoom_time: 0.5, // Duración del zoom
+
+    // Popup settings
+    popup_color: "white", // Color de fondo de los popups
+    popup_opacity: 0.9, // Opacidad de los popups
+    popup_shadow: 1, // Sombra de los popups
+    popup_corners: 5, // Radio de las esquinas de los popups
+    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif", // Fuente de los popups
+    popup_nocss: "no", // Si no se debe usar CSS en los popups
+
+    // Advanced settings
+    div: "map", // Div contenedor del mapa
+    auto_load: "yes", // Si el mapa debe cargarse automáticamente
+    url_new_tab: "no", // Si las URLs deben abrirse en una nueva pestaña
+    images_directory: "default", // Directorio de imágenes
+    fade_time: 0.1, // Tiempo de desvanecimiento
+    link_text: "View Website", // Texto del enlace
+    popups: "detect", // Cómo se deben mostrar los popups (detecta automáticamente)
+    state_image_url: "", // URL de la imagen de los estados
+    state_image_position: "", // Posición de la imagen de los estados
+    location_image_url: "" // URL de la imagen de las ubicaciones
   },
+  // Aquí puedes añadir la configuración específica de estados y ubicaciones
+
+
+  // Especificamos las caracterizticas que queremos resaltar de cada estado de China, le damos un color a cada región donde 
+  // donde se resalta alguna ubicación de templo o lugar sagrado.
   state_specific: {
     CNAH: {
       name: "Anhui Province"
@@ -178,7 +185,11 @@ var simplemaps_countrymap_mapdata={
       name: "Zhejiang Province"
     }
   },
+
+  // Ademas de las ubicaciones por región, hacemos uso de ubicaciones especificas ubicadas con coordenadas
   locations: {
+
+    // El formato de cada pop up es sencillo ya que consiste del nombre, una imagen del lugar y una breve descripción de su relevancia
     "0": {
       name: "Monte Wudang",
       lat: "32.398563",
@@ -216,6 +227,8 @@ var simplemaps_countrymap_mapdata={
       description: "<img src=\"https://www.visitourchina.com/FileUpload/FileUpload/110420163921531.jpg\" /> Situado en la montaña Jinshan, este templo taoísta es un importante lugar de culto y peregrinación en la provincia de Jiangsu. Es conocido por su arquitectura tradicional y su impresionante entorno natural."
     }
   },
+
+  // Etiquetas dadas a cada región 
   labels: {
     CNAH: {
       name: "Anhui Province",

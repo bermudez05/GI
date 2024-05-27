@@ -2,17 +2,24 @@
 <html>
 
 <head>
+    <!-- Meta etiquetas para la configuración inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"/>
     <meta lang="es"/>
+    <!-- Título de la página -->
     <title>Origen del taoísmo</title>
+    <!-- Enlace al archivo de estilos -->
     <link href="estilos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+    <!-- Encabezado de la página -->
     <div class="header">
         <div class="titulohead">
+            <!-- Título principal -->
             <h1>TAOÍSMO</h1>
         </div>
+        <!-- Menú de navegación -->
         <input id="toggle-menu" type="checkbox" class="nav-toggle">
         <label for="toggle-menu" class="nav-toggle-label">
           <span class="bar"></span>
@@ -21,11 +28,12 @@
         </label>
         <nav class="navbar">
             <ul>
+                <!-- Enlaces del menú -->
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Introduccion.html">Introducci&oacuten</a></li>
+                <li><a href="Introduccion.html">Introducción</a></li>
                 <li><a href="Origen.html">Origen del TAO</a></li>
                 <li><a href="Textos.html">Textos Taoístas</a></li>
-                <li><a href="Tipos.html">Taoísmo filosofíco</a></li>
+                <li><a href="Tipos.html">Taoísmo filosófico</a></li>
                 <li><a href="Personajes.html">Personajes principales</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="Referencias.html">Referencias</a></li>
@@ -36,9 +44,15 @@
     <div id="inicio"></div>
     <!-- Panel principal con información sobre el origen del taoísmo -->
     <div class="panel">
+
+        <!-- Contenedor que nos permitira organizar la información en dos columnas -->
         <div class="contenedorrow_uno">
+            <!-- Información insertada a la izquierda-->
             <div class="contenedorleft">
+                <!-- Insercion de una imagen -->
                 <img class="img_dos" src="Imagenes/origen1.png">
+
+                <!-- Insertamos una referencia que nos permite ir al final de la pagina -->
                 <p class="text_uno">
                     <a href="#final">Ir al final de la pagina</a>
                 </p>
@@ -52,6 +66,7 @@
                     Corea, Vietnam, Europa del sur y algunas partes del continente americano, 
                     donde se ha fusionado con diversas tradiciones locales.
                 </p>
+                <!-- Colocamos un divisor para separar secciones -->
                 <hr>
                 <p class="text_titulo">
                     Información historica del Taoísmo
@@ -68,25 +83,34 @@
                     antiguos como el "Tao Te Ching", atribuido a Laozi, y el "Zhuangzi", la formación del taoísmo como una tradición 
                     religiosa también incluye elementos de cultos populares, rituales y alquimia.
                 </p>
+
+
+                <!-- Lista de eventos históricos importantes en el desarrollo del taoísmo -->
                 <dl class="list_uno">
+                    <!-- Periodo de composición del "Tao Te Ching" por Laozi -->
                     <dt>Siglos VI - IV a.C.:</dt>
                     <dd class="text_uno">
                         Se atribuye a Laozi la composición del "Tao Te Ching" durante este período. El texto establece los principios fundamentales del taoísmo filosófico.
                     </dd>
+                    <!-- Evolución del taoísmo hacia una forma más religiosa -->
                     <dt>Siglos II - V d.C.:</dt>
                     <dd class="text_uno">
                         Durante este tiempo, el taoísmo evolucionó hacia una forma más religiosa. Aparecieron templos taoístas, y se desarrollaron prácticas rituales y alquimia interna.            
                     </dd>
+                    <!-- Prospero del taoísmo durante la Dinastía Tang -->
                     <dt>Dinastía Tang (618-907):</dt>
                     <dd class="text_uno">
                         El taoísmo prosperó y se organizó más formalmente. Se crearon instituciones religiosas, y la alquimia interna ganó popularidad con la búsqueda de la inmortalidad.
                     </dd>
+                    <!-- Continuación del desarrollo del taoísmo durante la Dinastía Ming -->
                     <dt>Dinastía Ming (1368-1644):</dt>
                     <dd class="text_uno">
                         El taoísmo continuó su desarrollo con la compilación del "Daozang" o Canon Taoísta, una colección de escrituras sagradas y textos filosóficos y religiosos.         
                     </dd>
                 </dl>
             </div>
+
+            <!-- Contenedor alineado a la derecha -->
             <div class="contenedorright">
                 <img  class="img_dos" src="Imagenes/origen2.png">
                 <p class="text_titulo">
@@ -97,6 +121,7 @@
                     Incluye la meditación, rituales y la integración de valores taoístas en la vida diaria. La idea es cultivar 
                     una conexión más profunda con la naturaleza, comprender el equilibrio de Yin y Yang, y buscar la paz interior.                               
                 </p>
+                <!-- Colocamos un divisor para separar secciones -->
                <hr> 
                 <p class="text_titulo">
                     ¿Qué beneficios trae la práctica del Taoísmo?
@@ -107,14 +132,18 @@
                     opuestas, encontrar un camino más natural y experimentar una conexión más profunda con el universo. Sin embargo, 
                     los beneficios percibidos pueden variar según la interpretación personal y la aplicación de estos principios.                        
                 </p>
+                <!-- Colocamos un divisor para separar secciones -->
                 <hr>
                 <img class="img_dos" src="Imagenes/historia.png" > 
                 <figcaption>Imagen del primer templo Tao una vez reconstruido</figcaption>
             </div>
         </div>
+
+        <!-- Insertamos un video centrado al final de la pagina con cierto estilo -->
         <div class="video">
             <iframe id="final" width="560" height="315" src="https://www.youtube.com/embed/tLAZvESoVgI" frameborder="0" allowfullscreen></iframe>
         </div>
+        <!-- Insertamos otra referencia que nos marque el final y nos permita navegar al inicio de la pagina -->
         <a class="text_uno" id="final" href="#inicio">Ir al inicio de la pagina</a>
     </div>
     
