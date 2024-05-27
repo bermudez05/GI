@@ -421,8 +421,7 @@ figcaption {
 }
 
 #map {
-    height: 90vh;
-    width: 100hw;
+    width: 100%;
 } 
 
 /* Consulta de medios para teléfonos celulares en sentido vertical (<800px) */
